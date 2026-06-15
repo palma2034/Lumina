@@ -4,177 +4,173 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ====== EDITA ESTO: título que aparece en la pestaña del navegador ====== -->
-  <title>Nombre del Negocio — Servicio principal</title>
+  <title>Lumina — Asesoría para clínicas estéticas</title>
+  <meta name="description" content="Lumina es una consultora especializada en asesoría estratégica para clínicas estéticas. Realza el potencial de tu clínica." />
 
-  <!-- ====== EDITA ESTO: descripción para buscadores (SEO) ====== -->
-  <meta name="description" content="Breve descripción de tu negocio y lo que ofreces." />
-
-  <!-- Tipografías (Google Fonts) -->
+  <!-- Tipografías -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
 
-  <!-- Tus estilos -->
   <link rel="stylesheet" href="css/estilos.css" />
 </head>
 
 <body>
 
   <!-- ============================================================
-       ENCABEZADO: logo + menú de navegación
+       ENCABEZADO: menú hamburguesa (arriba a la izquierda) + nombre
        ============================================================ -->
   <header class="encabezado">
     <div class="contenedor encabezado__interior">
 
-      <!-- EDITA ESTO: nombre o logo de tu negocio -->
-      <a href="#inicio" class="logo">TuNegocio</a>
-
-      <!-- Botón de menú para móvil (se muestra solo en pantallas pequeñas) -->
-      <button class="menu-boton" aria-label="Abrir menú" aria-expanded="false">
+      <!-- Botón hamburguesa, a la izquierda -->
+      <button class="hamburguesa" id="abrirMenu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuOverlay">
         <span></span><span></span><span></span>
       </button>
 
-      <!-- Menú de navegación -->
-      <nav class="nav" aria-label="Navegación principal">
-        <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-        <a href="#contacto" class="boton boton--pequeno">Cotizar</a>
-      </nav>
+      <!-- Nombre / marca -->
+      <a href="#inicio" class="marca">Lumina</a>
 
+      <!-- Espaciador para mantener la marca centrada -->
+      <span class="encabezado__espaciador" aria-hidden="true"></span>
     </div>
   </header>
+
+  <!-- ============================================================
+       MENÚ OVERLAY: se abre al tocar la hamburguesa.
+       Cada enlace salta a su sección.
+       ============================================================ -->
+  <nav class="menu-overlay" id="menuOverlay" aria-label="Navegación principal">
+    <button class="menu-overlay__cerrar" id="cerrarMenu" aria-label="Cerrar menú">&times;</button>
+    <ul>
+      <li><a href="#nosotros">Quiénes somos</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#contacto">Trabaja con nosotros</a></li>
+    </ul>
+  </nav>
 
   <main>
 
     <!-- ============================================================
-         HERO: lo primero que se ve. Frase clara + llamado a la acción
+         HERO: presentación de la marca con efecto de luz
          ============================================================ -->
     <section class="hero" id="inicio">
+      <div class="hero__luz" aria-hidden="true"></div>
       <div class="contenedor hero__interior">
-        <p class="eyebrow">Tu rubro o especialidad</p>
+        <p class="eyebrow">Consultora · Clínicas estéticas</p>
+        <h1 class="hero__titulo">Lumina</h1>
+        <p class="hero__bajada">
+          Realzamos el potencial de tu clínica estética con asesoría
+          estratégica, cercana y a la medida.
+        </p>
+        <a href="#contacto" class="boton">Trabaja con nosotros</a>
+      </div>
+    </section>
 
-        <!-- EDITA ESTO: frase principal. Que se entienda al instante qué haces -->
-        <h1 class="hero__titulo">
-          Una frase clara que diga<br />
-          <span class="acento">qué resuelves</span> para tus clientes
-        </h1>
+    <!-- ============================================================
+         QUIÉNES SOMOS
+         ============================================================ -->
+    <section class="seccion" id="nosotros">
+      <div class="contenedor seccion--angosta">
+        <p class="eyebrow">Quiénes somos</p>
+        <h2 class="seccion__titulo">Asesoría que ilumina el camino</h2>
 
-        <!-- EDITA ESTO: una o dos líneas de apoyo -->
-        <p class="hero__texto">
-          Aquí va una breve explicación de tu propuesta de valor: a quién
-          ayudas, cómo lo haces y por qué deberían elegirte a ti.
+        <!-- EDITA ESTO: tu texto real de presentación -->
+        <p class="texto-grande">
+          En Lumina acompañamos a clínicas estéticas a crecer con claridad.
+          Combinamos experiencia en gestión, marketing y operaciones para que
+          tu clínica brille por dentro y por fuera.
+        </p>
+        <p>
+          Trabajamos de la mano contigo para entender tu realidad, detectar
+          oportunidades y construir un plan concreto. Sin fórmulas genéricas:
+          cada clínica es distinta, y nuestra asesoría también.
         </p>
 
-        <div class="hero__acciones">
-          <a href="#contacto" class="boton">Pide una cotización</a>
-          <a href="#servicios" class="enlace-flecha">Ver servicios →</a>
+        <!-- Tres pilares (edita libremente o elimina este bloque) -->
+        <div class="pilares">
+          <div class="pilar">
+            <span class="pilar__numero">01</span>
+            <h3>Estrategia</h3>
+            <p>Un plan claro y accionable, pensado para tu clínica.</p>
+          </div>
+          <div class="pilar">
+            <span class="pilar__numero">02</span>
+            <h3>Operación</h3>
+            <p>Procesos que ordenan el día a día y liberan tu tiempo.</p>
+          </div>
+          <div class="pilar">
+            <span class="pilar__numero">03</span>
+            <h3>Crecimiento</h3>
+            <p>Más pacientes y mejores resultados, de forma sostenible.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         SERVICIOS: qué ofreces, en tarjetas
+         TESTIMONIOS
          ============================================================ -->
-    <section class="seccion" id="servicios">
+    <section class="seccion seccion--alt" id="testimonios">
       <div class="contenedor">
         <header class="seccion__cabecera">
-          <p class="eyebrow">Servicios</p>
-          <h2 class="seccion__titulo">Lo que ofrecemos</h2>
+          <p class="eyebrow">Testimonios</p>
+          <h2 class="seccion__titulo">Lo que dicen nuestras clínicas</h2>
         </header>
 
-        <div class="grilla-servicios">
+        <div class="grilla-testimonios">
 
-          <!-- Tarjeta de servicio (duplica este bloque para añadir más) -->
-          <article class="tarjeta">
-            <div class="tarjeta__icono">01</div>
-            <h3>Servicio uno</h3>
-            <p>
-              Describe brevemente este servicio y el beneficio concreto que
-              obtiene el cliente al contratarlo.
-            </p>
-          </article>
+          <!-- EDITA ESTO: reemplaza las citas por las reales -->
+          <figure class="testimonio">
+            <blockquote>
+              "Lumina transformó la forma en que gestionamos nuestra clínica.
+              Su asesoría fue clara, práctica y con resultados desde el primer mes."
+            </blockquote>
+            <figcaption>
+              <strong>Dr. José Antonio Zavala</strong>
+              <span>Médico Cirujano Estético</span>
+            </figcaption>
+          </figure>
 
-          <article class="tarjeta">
-            <div class="tarjeta__icono">02</div>
-            <h3>Servicio dos</h3>
-            <p>
-              Describe brevemente este servicio y el beneficio concreto que
-              obtiene el cliente al contratarlo.
-            </p>
-          </article>
+          <figure class="testimonio">
+            <blockquote>
+              "Gracias a Lumina pudimos ordenar nuestros procesos y enfocarnos
+              en lo que de verdad importa: nuestros pacientes."
+            </blockquote>
+            <figcaption>
+              <strong>Dr. Oscar Águila</strong>
+              <span>Especialista en Medicina Estética</span>
+            </figcaption>
+          </figure>
 
-          <article class="tarjeta">
-            <div class="tarjeta__icono">03</div>
-            <h3>Servicio tres</h3>
-            <p>
-              Describe brevemente este servicio y el beneficio concreto que
-              obtiene el cliente al contratarlo.
-            </p>
-          </article>
+          <figure class="testimonio">
+            <blockquote>
+              "Un equipo excepcional. Entienden el mundo de las clínicas estéticas
+              y saben exactamente cómo acompañarte a crecer."
+            </blockquote>
+            <figcaption>
+              <strong>Dra. Oriana León</strong>
+              <span>Directora Médica</span>
+            </figcaption>
+          </figure>
 
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         NOSOTROS: historia o propuesta de valor del negocio
-         ============================================================ -->
-    <section class="seccion seccion--alt" id="nosotros">
-      <div class="contenedor nosotros">
-        <div class="nosotros__texto">
-          <p class="eyebrow">Sobre nosotros</p>
-          <h2 class="seccion__titulo">Quiénes somos</h2>
-          <p>
-            Aquí puedes contar la historia de tu negocio, cuánto tiempo llevas,
-            qué te diferencia y por qué los clientes confían en ti.
-          </p>
-          <p>
-            Un segundo párrafo opcional para reforzar tu experiencia o tus
-            valores.
-          </p>
-        </div>
-
-        <!-- Datos o cifras destacadas. EDITA los números y etiquetas -->
-        <div class="nosotros__cifras">
-          <div class="cifra">
-            <strong>+10</strong>
-            <span>años de experiencia</span>
-          </div>
-          <div class="cifra">
-            <strong>+200</strong>
-            <span>clientes satisfechos</span>
-          </div>
-          <div class="cifra">
-            <strong>100%</strong>
-            <span>compromiso</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         CONTACTO: datos + formulario
+         TRABAJA CON NOSOTROS (formulario)
          ============================================================ -->
     <section class="seccion" id="contacto">
-      <div class="contenedor contacto">
+      <div class="contenedor seccion--angosta seccion--centrada">
+        <p class="eyebrow">Trabaja con nosotros</p>
+        <h2 class="seccion__titulo">Conversemos sobre tu clínica</h2>
+        <p class="texto-grande">
+          Cuéntanos qué necesitas y te contactaremos para ver cómo podemos
+          ayudarte.
+        </p>
 
-        <div class="contacto__info">
-          <p class="eyebrow">Contacto</p>
-          <h2 class="seccion__titulo">Conversemos</h2>
-          <p>Escríbenos y te respondemos a la brevedad.</p>
-
-          <!-- EDITA ESTO: tus datos reales de contacto -->
-          <ul class="contacto__datos">
-            <li><strong>Correo:</strong> hola@tunegocio.cl</li>
-            <li><strong>Teléfono:</strong> +56 9 1234 5678</li>
-            <li><strong>Ubicación:</strong> Santiago, Chile</li>
-          </ul>
-        </div>
-
-        <!-- Formulario. Más abajo, en el README, te explico cómo hacerlo
-             funcional (por ahora es solo visual). -->
+        <!-- Formulario: por ahora es visual. Para activarlo, ver el README. -->
         <form class="formulario" onsubmit="return false;">
           <label>
             Nombre
@@ -185,32 +181,55 @@
             <input type="email" name="correo" placeholder="tucorreo@ejemplo.cl" required />
           </label>
           <label>
-            Mensaje
-            <textarea name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas"></textarea>
+            ¿Qué necesitas?
+            <textarea name="mensaje" rows="5" placeholder="Cuéntanos sobre tu clínica y en qué te gustaría que te ayudemos" required></textarea>
           </label>
           <button type="submit" class="boton">Enviar mensaje</button>
         </form>
-
       </div>
     </section>
 
   </main>
 
   <!-- ============================================================
-       PIE DE PÁGINA
+       PIE DE PÁGINA: redes (Instagram, WhatsApp, Mail)
+       Reemplaza los href="#" por tus enlaces reales.
        ============================================================ -->
   <footer class="pie">
     <div class="contenedor pie__interior">
-      <span>© 2026 TuNegocio. Todos los derechos reservados.</span>
-      <nav class="pie__redes" aria-label="Redes sociales">
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">WhatsApp</a>
+      <span class="pie__marca">Lumina</span>
+
+      <nav class="redes" aria-label="Redes sociales">
+        <!-- Instagram: pon tu URL, ej. https://instagram.com/tu_cuenta -->
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5" />
+            <circle cx="12" cy="12" r="4.2" />
+            <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none" />
+          </svg>
+        </a>
+
+        <!-- WhatsApp: usa https://wa.me/569XXXXXXXX -->
+        <a href="#" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5Z" />
+            <path d="M8.4 7.8c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 3 4.5 4 .6.3 1.1.4 1.5.5.6.1 1.1.1 1.6 0 .5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3l-1.6-.8c-.2-.1-.4-.1-.6.1l-.6.8c-.1.1-.2.1-.4 0-.6-.2-1.3-.6-2-1.4-.5-.6-.9-1.2-1-1.4-.1-.2 0-.3.1-.4l.4-.5c.1-.1.1-.2.2-.4 0-.1 0-.3 0-.4l-.7-1.6c-.2-.4-.3-.4-.5-.4Z" fill="currentColor" stroke="none" />
+          </svg>
+        </a>
+
+        <!-- Correo: usa mailto:hola@lumina.cl -->
+        <a href="#" aria-label="Correo">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+            <path d="m3 6 9 6 9-6" />
+          </svg>
+        </a>
       </nav>
+
+      <span class="pie__copy">© 2026 Lumina. Todos los derechos reservados.</span>
     </div>
   </footer>
 
-  <!-- Tu JavaScript -->
   <script src="js/script.js"></script>
 </body>
 </html>
