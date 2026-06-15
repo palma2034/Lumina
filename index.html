@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ====== EDITA ESTO: título que aparece en la pestaña del navegador ====== -->
+  <title>Nombre del Negocio — Servicio principal</title>
+
+  <!-- ====== EDITA ESTO: descripción para buscadores (SEO) ====== -->
+  <meta name="description" content="Breve descripción de tu negocio y lo que ofreces." />
+
+  <!-- Tipografías (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tus estilos -->
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       ENCABEZADO: logo + menú de navegación
+       ============================================================ -->
+  <header class="encabezado">
+    <div class="contenedor encabezado__interior">
+
+      <!-- EDITA ESTO: nombre o logo de tu negocio -->
+      <a href="#inicio" class="logo">TuNegocio</a>
+
+      <!-- Botón de menú para móvil (se muestra solo en pantallas pequeñas) -->
+      <button class="menu-boton" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Menú de navegación -->
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#contacto" class="boton boton--pequeno">Cotizar</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO: lo primero que se ve. Frase clara + llamado a la acción
+         ============================================================ -->
+    <section class="hero" id="inicio">
+      <div class="contenedor hero__interior">
+        <p class="eyebrow">Tu rubro o especialidad</p>
+
+        <!-- EDITA ESTO: frase principal. Que se entienda al instante qué haces -->
+        <h1 class="hero__titulo">
+          Una frase clara que diga<br />
+          <span class="acento">qué resuelves</span> para tus clientes
+        </h1>
+
+        <!-- EDITA ESTO: una o dos líneas de apoyo -->
+        <p class="hero__texto">
+          Aquí va una breve explicación de tu propuesta de valor: a quién
+          ayudas, cómo lo haces y por qué deberían elegirte a ti.
+        </p>
+
+        <div class="hero__acciones">
+          <a href="#contacto" class="boton">Pide una cotización</a>
+          <a href="#servicios" class="enlace-flecha">Ver servicios →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICIOS: qué ofreces, en tarjetas
+         ============================================================ -->
+    <section class="seccion" id="servicios">
+      <div class="contenedor">
+        <header class="seccion__cabecera">
+          <p class="eyebrow">Servicios</p>
+          <h2 class="seccion__titulo">Lo que ofrecemos</h2>
+        </header>
+
+        <div class="grilla-servicios">
+
+          <!-- Tarjeta de servicio (duplica este bloque para añadir más) -->
+          <article class="tarjeta">
+            <div class="tarjeta__icono">01</div>
+            <h3>Servicio uno</h3>
+            <p>
+              Describe brevemente este servicio y el beneficio concreto que
+              obtiene el cliente al contratarlo.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta__icono">02</div>
+            <h3>Servicio dos</h3>
+            <p>
+              Describe brevemente este servicio y el beneficio concreto que
+              obtiene el cliente al contratarlo.
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <div class="tarjeta__icono">03</div>
+            <h3>Servicio tres</h3>
+            <p>
+              Describe brevemente este servicio y el beneficio concreto que
+              obtiene el cliente al contratarlo.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         NOSOTROS: historia o propuesta de valor del negocio
+         ============================================================ -->
+    <section class="seccion seccion--alt" id="nosotros">
+      <div class="contenedor nosotros">
+        <div class="nosotros__texto">
+          <p class="eyebrow">Sobre nosotros</p>
+          <h2 class="seccion__titulo">Quiénes somos</h2>
+          <p>
+            Aquí puedes contar la historia de tu negocio, cuánto tiempo llevas,
+            qué te diferencia y por qué los clientes confían en ti.
+          </p>
+          <p>
+            Un segundo párrafo opcional para reforzar tu experiencia o tus
+            valores.
+          </p>
+        </div>
+
+        <!-- Datos o cifras destacadas. EDITA los números y etiquetas -->
+        <div class="nosotros__cifras">
+          <div class="cifra">
+            <strong>+10</strong>
+            <span>años de experiencia</span>
+          </div>
+          <div class="cifra">
+            <strong>+200</strong>
+            <span>clientes satisfechos</span>
+          </div>
+          <div class="cifra">
+            <strong>100%</strong>
+            <span>compromiso</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACTO: datos + formulario
+         ============================================================ -->
+    <section class="seccion" id="contacto">
+      <div class="contenedor contacto">
+
+        <div class="contacto__info">
+          <p class="eyebrow">Contacto</p>
+          <h2 class="seccion__titulo">Conversemos</h2>
+          <p>Escríbenos y te respondemos a la brevedad.</p>
+
+          <!-- EDITA ESTO: tus datos reales de contacto -->
+          <ul class="contacto__datos">
+            <li><strong>Correo:</strong> hola@tunegocio.cl</li>
+            <li><strong>Teléfono:</strong> +56 9 1234 5678</li>
+            <li><strong>Ubicación:</strong> Santiago, Chile</li>
+          </ul>
+        </div>
+
+        <!-- Formulario. Más abajo, en el README, te explico cómo hacerlo
+             funcional (por ahora es solo visual). -->
+        <form class="formulario" onsubmit="return false;">
+          <label>
+            Nombre
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+          </label>
+          <label>
+            Correo
+            <input type="email" name="correo" placeholder="tucorreo@ejemplo.cl" required />
+          </label>
+          <label>
+            Mensaje
+            <textarea name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas"></textarea>
+          </label>
+          <button type="submit" class="boton">Enviar mensaje</button>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       PIE DE PÁGINA
+       ============================================================ -->
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+      <span>© 2026 TuNegocio. Todos los derechos reservados.</span>
+      <nav class="pie__redes" aria-label="Redes sociales">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">WhatsApp</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Tu JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
