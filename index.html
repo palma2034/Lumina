@@ -28,10 +28,18 @@
         <span></span><span></span><span></span>
       </button>
 
-      <!-- Nombre / marca -->
-      <a href="#inicio" class="marca">Lumina</a>
+      <!-- Logo SVG centrado -->
+      <a href="#inicio" class="marca" aria-label="Lumina — inicio">
+        <svg width="56" height="56" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="110" cy="110" r="104" fill="#33282a"/>
+          <circle cx="110" cy="110" r="98" fill="none" stroke="#c4a160" stroke-width="2"/>
+          <text x="76" y="152" font-family="Cormorant Garamond, Georgia, serif" font-size="90" font-weight="500" fill="#f9f4ee" text-anchor="middle">L</text>
+          <text x="144" y="152" font-family="Cormorant Garamond, Georgia, serif" font-size="90" font-weight="500" fill="#f9f4ee" text-anchor="middle">S</text>
+          <path d="M110,48 L115,82 L149,84 L115,86 L110,120 L105,86 L71,84 L105,82 Z" fill="#c4a160"/>
+        </svg>
+      </a>
 
-      <!-- Espaciador para mantener la marca centrada -->
+      <!-- Espaciador para mantener el logo centrado -->
       <span class="encabezado__espaciador" aria-hidden="true"></span>
     </div>
   </header>
@@ -156,6 +164,18 @@
 
         </div>
       </div>
+
+        <!-- Video YouTube -->
+        <div class="video-contenedor">
+          <iframe
+            src="https://www.youtube.com/embed/eBSQug_xtwc"
+            title="Video Lumina"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
     </section>
 
     <!-- ============================================================
@@ -171,7 +191,7 @@
         </p>
 
         <!-- Formulario: por ahora es visual. Para activarlo, ver el README. -->
-        <form class="formulario" onsubmit="return false;">
+        <form class="formulario" action="https://formspree.io/f/xnjknkpv" method="POST">
           <label>
             Nombre
             <input type="text" name="nombre" placeholder="Tu nombre" required />
@@ -231,5 +251,16 @@
   </footer>
 
   <script src="js/script.js"></script>
+
+  <!-- ============================================================
+       BOTÓN FLOTANTE DE WHATSAPP
+       ============================================================ -->
+  <a href="https://wa.me/56976203655" target="_blank" rel="noopener noreferrer" class="whatsapp-flotante" aria-label="Contáctanos por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5Z" fill="#f9f4ee" stroke="#f9f4ee" stroke-width="0.3"/>
+      <path d="M8.4 7.8c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 3 4.5 4 .6.3 1.1.4 1.5.5.6.1 1.1.1 1.6 0 .5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3l-1.6-.8c-.2-.1-.4-.1-.6.1l-.6.8c-.1.1-.2.1-.4 0-.6-.2-1.3-.6-2-1.4-.5-.6-.9-1.2-1-1.4-.1-.2 0-.3.1-.4l.4-.5c.1-.1.1-.2.2-.4 0-.1 0-.3 0-.4l-.7-1.6c-.2-.4-.3-.4-.5-.4Z" fill="#33282a"/>
+    </svg>
+  </a>
+
 </body>
 </html>
