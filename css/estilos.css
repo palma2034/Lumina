@@ -478,12 +478,31 @@ p { margin: 0; }
   .hero-texto > p { font-size: 1.08rem; }
   .prueba { border-radius: 14px; grid-template-columns: auto minmax(0, 1fr); }
   .prueba-link { grid-column: 2; }
-  .hero-visual { padding-top: 0; }
-  .telefono { width: min(230px, 64vw); }
-  .hero-visual { justify-items: center; }
-  .notis { position: relative; top: auto; right: auto; width: min(320px, 100%); margin-top: -28px; }
-  .noti:nth-child(2) { margin-left: 0; }
-  .hero-visual { padding-bottom: 8px; }
+  /* Celular: titular → celular con mensajes → texto, botones y prueba */
+  .hero .contenedor { gap: 18px; }
+  .hero-texto { display: contents; }
+  .hero-texto > .etiqueta { display: none; }
+  .hero-texto > h1 { order: 1; text-align: center; }
+  .hero-visual { order: 2; }
+  .hero-texto > p, .hero-acciones, .prueba { order: 3; justify-self: center; text-align: center; }
+  .prueba { order: 4; text-align: left; }
+  .hero-texto > p.hero-corto { display: block; }
+  .hero-texto > p.hero-largo { display: none; }
+  .hero h1 { font-size: clamp(2rem, 8.6vw, 2.5rem); }
+  .hero-visual { max-width: 360px; justify-items: start; padding: 0 0 4px; }
+  .telefono { width: min(196px, 52vw); padding: 7px; border-radius: 30px; }
+  .reel { border-radius: 24px; }
+  .reel-capa { padding: 12px 10px 10px; gap: 8px; }
+  .reel-cuenta { top: 11px; left: 11px; font-size: .6rem; gap: 6px; }
+  .reel-avatar { width: 22px; height: 22px; }
+  .reel-subtitulo { font-size: .74rem; }
+  .reel-boton { font-size: .62rem; padding: 7px; }
+  .notis { position: absolute; right: 0; top: 30%; width: min(210px, 56%); gap: 8px; }
+  .noti { font-size: .72rem; padding: 9px 10px; grid-template-columns: 24px minmax(0, 1fr); gap: 8px; border-radius: 12px; }
+  .noti-icono { width: 24px; height: 24px; border-radius: 7px; }
+  .noti-icono svg { width: 13px; height: 13px; }
+  .noti em { font-size: .64rem; }
+  .noti:nth-child(2) { margin-left: 14px; }
   .sin-cambios { grid-template-columns: minmax(0, 1fr); padding: 22px; }
   .como-cabeza:has(.foto-slot:not([hidden])) { grid-template-columns: minmax(0, 1fr); }
   .burbuja { right: 0; }
@@ -502,3 +521,9 @@ p { margin: 0; }
 /* Menos aire entre el cierre del deseo y Cómo funciona */
 .deseo { padding-bottom: clamp(32px, 4vw, 52px); }
 #como-funciona { padding-top: clamp(36px, 4vw, 52px); }
+
+/* Celulares pequeños: los mensajes suben un poco para no tapar el subtítulo del video */
+@media (max-width: 380px) {
+  .notis { top: 22%; width: min(196px, 55%); }
+  .reel-subtitulo { font-size: .7rem; }
+}
