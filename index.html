@@ -154,6 +154,7 @@
       <ul>
         <li><a href="#como-funciona">Cómo funciona</a></li>
         <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#guia">Guía</a></li>
         <li><a href="#para-quien">Para quién</a></li>
         <li><a href="#preguntas">Preguntas</a></li>
       </ul>
@@ -382,6 +383,61 @@
       </div>
       <p class="resultados-nota">Cada paciente nueva que vuelve a tu consulta suma a una base que crece mes a mes. Ahí está el valor que no se ve en una campaña aislada.</p>
       <div class="cta-intermedio"><a class="boton boton-ambar js-whatsapp" href="https://wa.me/56993099473?text=Hola%2C%20soy%20doctora%20y%20quiero%20saber%20m%C3%A1s%20sobre%20L%C3%BAmina%20Studio.%20Atiendo%20en%20%28ciudad%29%3A" target="_blank" rel="noopener" data-ubicacion="tras-resultados"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/></svg>Conversemos sobre tu consulta</a><p>Sin compromiso. Te respondemos personalmente.</p></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GUÍA GRATUITA: se descarga dejando nombre, teléfono y correo
+       ============================================================ -->
+  <section class="seccion guia" id="guia" aria-labelledby="titulo-guia">
+    <div class="contenedor">
+      <div class="guia-visual" aria-hidden="true">
+        <img class="guia-pag2" src="img/guia-pagina2.jpg" alt="" width="595" height="1058" loading="lazy">
+        <img class="guia-portada" src="img/guia-portada.jpg" alt="" width="595" height="1058" loading="lazy">
+      </div>
+      <div class="guia-contenido">
+        <p class="etiqueta">Un regalo para tu consulta · Lectura de 5 minutos</p>
+        <h2 id="titulo-guia">De la consulta a la reserva</h2>
+        <p>El recorrido de una paciente nueva y dónde se pierde la mayoría: desde que ve tu anuncio hasta que agenda.</p>
+        <ul class="guia-temas">
+          <li>Por qué casi nunca es un problema de precio</li>
+          <li>Qué anuncio atrae a cotizar y cuál atrae a agendar</li>
+          <li>Tres reglas para que la conversación por WhatsApp no se enfríe</li>
+        </ul>
+
+        <form class="guia-form" id="guia-form" data-endpoint="https://script.google.com/macros/s/AKfycbxc6oiHgjPfZTwNjb8eUCpg3ZC0GmWRMim1kCEK9vkLaqqiMyUXzaOVmZD4P0SANRkk/exec" novalidate>
+          <div class="campo">
+            <label for="guia-nombre">Nombre</label>
+            <input id="guia-nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="guia-telefono">Celular (WhatsApp)</label>
+            <input id="guia-telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" placeholder="9 1234 5678" required>
+          </div>
+          <div class="campo">
+            <label for="guia-correo">Correo</label>
+            <input id="guia-correo" name="correo" type="email" autocomplete="email" required>
+          </div>
+          <!-- Campo trampa contra spam: las personas no lo ven -->
+          <div class="trampa" aria-hidden="true">
+            <label for="guia-empresa">Empresa</label>
+            <input id="guia-empresa" name="empresa" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <label class="acepta" for="guia-acepta">
+            <input id="guia-acepta" name="acepta" type="checkbox" value="si" required>
+            <span>Acepto que Lúmina Studio me contacte por WhatsApp o correo.</span>
+          </label>
+          <p class="guia-error" id="guia-error" role="alert" hidden></p>
+          <button class="boton boton-principal" type="submit" id="guia-enviar">Quiero mi guía</button>
+          <p class="guia-privacidad">Usamos tus datos solo para enviarte la guía y contactarte sobre Lúmina. No los compartimos con terceros.</p>
+        </form>
+
+        <div class="guia-lista" id="guia-lista" hidden tabindex="-1">
+          <p class="guia-lista-titulo">¡Listo! Tu guía está aquí.</p>
+          <a class="boton boton-ambar" href="guia/De-la-consulta-a-la-reserva-Lumina.pdf" download id="guia-descarga">Descargar PDF</a>
+          <p>Si tienes preguntas después de leerla, escríbenos por WhatsApp.</p>
+        </div>
+      </div>
     </div>
   </section>
 

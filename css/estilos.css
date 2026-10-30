@@ -25,6 +25,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 88px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
@@ -362,6 +363,47 @@ p { margin: 0; }
 .caso .etiqueta { color: var(--arena); }
 .resultados-nota { margin-top: clamp(24px, 3vw, 36px); max-width: 46rem; color: #C9D2D6; font-size: 1.02rem; }
 
+/* ---------- Guía gratuita ---------- */
+.guia { background: var(--marfil-2); }
+.guia .contenedor { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 80px); align-items: center; }
+.guia-visual { position: relative; width: min(300px, 100%); justify-self: center; aspect-ratio: 595 / 1058; }
+.guia-visual img { position: absolute; width: 82%; height: auto; border-radius: 6px; box-shadow: 0 24px 48px -24px rgba(30, 42, 49, .55); }
+.guia-pag2 { right: 0; top: 4%; transform: rotate(5deg); }
+.guia-portada { left: 0; top: 0; transform: rotate(-3deg); }
+.guia-contenido { display: grid; gap: 16px; min-width: 0; }
+.guia-contenido > p:not(.etiqueta) { color: #3D4B53; font-size: 1.08rem; }
+.guia-temas { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.guia-temas li { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 8px; color: var(--tinta); }
+.guia-temas li::before { content: "✓"; color: var(--ambar-oscuro); font-weight: 700; }
+.guia-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 14px; margin-top: 8px; padding: 22px; background: #FBF9F5; border: 1px solid var(--linea); border-radius: 10px; }
+.guia-form .campo { display: grid; gap: 6px; min-width: 0; }
+.guia-form .campo:first-child { grid-column: 1 / -1; }
+.guia-form label { font-size: .85rem; font-weight: 600; color: var(--petroleo); }
+.guia-form input[type=text], .guia-form input[type=tel], .guia-form input[type=email] {
+  width: 100%; font: inherit; font-size: 1rem; color: var(--tinta);
+  padding: .7em .85em; border: 1px solid rgba(36, 69, 86, .28); border-radius: 8px; background: #fff;
+}
+.guia-form input:focus { outline: 2px solid var(--ambar); outline-offset: 1px; border-color: var(--petroleo); }
+.guia-form .acepta { grid-column: 1 / -1; display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 10px; align-items: start; font-weight: 400; color: #3D4B53; font-size: .9rem; cursor: pointer; }
+.guia-form .acepta input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--petroleo); }
+.guia-form .boton { grid-column: 1 / -1; justify-self: start; border: 0; cursor: pointer; }
+.guia-form .boton:disabled { opacity: .7; cursor: default; }
+.guia-error { grid-column: 1 / -1; color: #A3402E; font-size: .9rem; font-weight: 600; }
+.guia-privacidad { grid-column: 1 / -1; font-size: .78rem; color: var(--piedra); }
+.trampa { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.guia-lista { display: grid; gap: 12px; justify-items: start; padding: 22px; background: #FBF9F5; border: 1px solid var(--petroleo); border-radius: 10px; }
+.guia-lista:focus { outline: none; }
+.guia-lista-titulo { font-family: var(--f-titulo); font-size: 1.4rem; color: var(--petroleo); }
+.guia-lista p:last-child { color: var(--piedra); font-size: .92rem; }
+@media (max-width: 900px) {
+  .guia .contenedor { grid-template-columns: minmax(0, 1fr); }
+  .guia-visual { width: min(220px, 60%); }
+}
+@media (max-width: 680px) {
+  .guia-form { grid-template-columns: minmax(0, 1fr); padding: 18px; }
+  .guia-form .boton { justify-self: stretch; justify-content: center; }
+}
+
 /* ---------- Para quién ---------- */
 .perfil { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 36px); }
 .lista-perfil { padding: clamp(24px, 3vw, 34px); border-radius: 6px; display: grid; gap: 18px; align-content: start; min-width: 0; }
@@ -526,4 +568,14 @@ p { margin: 0; }
 @media (max-width: 380px) {
   .notis { top: 22%; width: min(196px, 55%); }
   .reel-subtitulo { font-size: .7rem; }
+}
+
+/* Menú con 5 opciones: más compacto en celulares */
+@media (max-width: 680px) {
+  .menu ul { gap: 11px; }
+  .menu a { font-size: .78rem; }
+}
+@media (max-width: 380px) {
+  .menu ul { gap: 9px; }
+  .menu a { font-size: .74rem; }
 }
