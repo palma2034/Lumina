@@ -80,7 +80,7 @@ document.querySelectorAll('.js-whatsapp').forEach((enlace) => {
     if (nombre.length < 2) return mostrarError('Escribe tu nombre.', form.nombre);
     if (!celularOk) return mostrarError('Revisa tu celular: debe tener 9 dígitos y empezar con 9. Por ejemplo: 9 1234 5678.', form.telefono);
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(correo)) return mostrarError('Revisa tu correo. Por ejemplo: nombre@gmail.com.', form.correo);
-    if (!form.acepta.checked) return mostrarError('Para descargar la guía, acepta que te contactemos.', form.acepta);
+    if (!form.acepta.checked) return mostrarError('Para descargar la guía, acepta recibir información de Lúmina Studio.', form.acepta);
 
     boton.disabled = true;
     boton.textContent = 'Enviando…';
