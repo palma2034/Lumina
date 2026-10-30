@@ -579,3 +579,67 @@ p { margin: 0; }
   .menu ul { gap: 9px; }
   .menu a { font-size: .74rem; }
 }
+
+/* ============================================================
+   BLOG, ARTÍCULOS Y PÁGINAS INTERIORES
+   ============================================================ */
+
+/* "Blog" en el menú: solo en pantallas grandes (en celular está en la franja y el pie) */
+@media (max-width: 680px) { .menu .solo-escritorio { display: none; } }
+
+/* Franja del blog al final del inicio */
+.blog-franja { border-top: 1px solid var(--linea); }
+.blog-franja-cabeza { display: flex; justify-content: space-between; align-items: end; gap: 12px 24px; flex-wrap: wrap; margin-bottom: 24px; }
+.blog-franja-cabeza > div { display: grid; gap: 10px; }
+.enlace-flecha { font-weight: 700; color: var(--petroleo); text-decoration: none; white-space: nowrap; }
+.enlace-flecha:hover { text-decoration: underline; }
+.tarjetas-articulos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.tarjeta-articulo {
+  display: grid; gap: 10px; align-content: start; padding: 24px; min-width: 0;
+  background: #FBF9F5; border: 1px solid var(--linea); border-radius: 10px;
+  text-decoration: none; color: inherit; transition: border-color .2s, transform .2s;
+}
+.tarjeta-articulo:hover { border-color: var(--petroleo); transform: translateY(-2px); }
+.tarjeta-articulo h2, .tarjeta-articulo h3 { font-size: 1.35rem; line-height: 1.25; }
+.tarjeta-articulo p { color: #46535A; font-size: .98rem; }
+.tarjeta-articulo .leer { font-weight: 700; color: var(--petroleo); font-size: .92rem; }
+
+/* Páginas interiores */
+.pagina { padding-left: var(--gutter-l); padding-right: var(--gutter-r); padding-block: clamp(32px, 5vw, 64px) clamp(56px, 7vw, 96px); }
+.articulo, .blog-indice { max-width: 44rem; margin-inline: auto; display: grid; gap: 22px; }
+.blog-indice { max-width: var(--ancho); }
+.blog-indice h1 { max-width: 40rem; }
+.blog-intro { color: #3D4B53; font-size: 1.12rem; max-width: 42rem; }
+.migas { display: flex; flex-wrap: wrap; gap: 8px; font-size: .85rem; color: var(--piedra); }
+.migas a { color: var(--piedra); }
+.migas a:hover { color: var(--petroleo); }
+.articulo-cabeza { display: grid; gap: 12px; border-bottom: 1px solid var(--linea); padding-bottom: 22px; }
+.articulo-cabeza h1 { font-size: clamp(2rem, 4.6vw, 3rem); line-height: 1.12; }
+.articulo-meta { font-size: .9rem; color: var(--piedra); }
+.articulo-cuerpo { display: grid; gap: 18px; font-size: 1.08rem; line-height: 1.75; color: #2B3A42; }
+.articulo-cuerpo h2 { font-size: clamp(1.45rem, 3vw, 1.8rem); line-height: 1.25; margin-top: 18px; }
+.articulo-cuerpo ul { margin: 0; padding-left: 1.2em; display: grid; gap: 10px; }
+.articulo-cuerpo li::marker { color: var(--ambar-oscuro); }
+.articulo-cuerpo strong { color: var(--tinta); }
+.articulo-intro { font-size: 1.18rem; color: #3D4B53; }
+.articulo-cta { margin-top: 16px; padding: clamp(22px, 4vw, 34px); border-radius: 12px; background: var(--petroleo); color: var(--marfil); display: grid; gap: 12px; }
+.articulo-cta h2 { color: var(--marfil); font-size: 1.6rem; }
+.articulo-cta .etiqueta { color: var(--arena); }
+.articulo-cta p { color: #D6DDE0; }
+.articulo-cta-botones { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.boton-claro { color: var(--marfil); border-color: rgba(245, 241, 234, .4); }
+.boton-claro:hover { border-color: var(--marfil); }
+
+/* Pie con "Sobre Lúmina" */
+.pie { padding-block: 40px 28px; }
+.pie .contenedor.pie-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px 48px; align-items: start; justify-content: initial; }
+.pie-sobre { display: grid; gap: 12px; max-width: 36rem; }
+.pie-sobre p { color: var(--piedra); font-size: .92rem; line-height: 1.6; }
+.pie-sobre .pie-marca { color: var(--petroleo); font-family: var(--f-titulo); font-size: 1.2rem; }
+.pie .pie-enlaces { display: grid; gap: 10px; justify-items: start; }
+.pie-enlaces a { color: var(--petroleo); font-weight: 600; font-size: .95rem; }
+.pie .contenedor.pie-legal { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--linea); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; font-size: .85rem; }
+@media (max-width: 680px) {
+  .pie .contenedor.pie-grid { grid-template-columns: minmax(0, 1fr); }
+  .articulo-cta-botones .boton { width: 100%; justify-content: center; }
+}

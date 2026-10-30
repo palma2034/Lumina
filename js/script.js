@@ -23,9 +23,11 @@ document.querySelectorAll('img[data-opcional]').forEach((img) => {
 
 // 1. Menú activo según la sección visible
 (function () {
-  const enlaces = Array.from(document.querySelectorAll('.menu a'));
+  // Solo los enlaces a secciones de esta misma página (#...); en el blog no aplica
+  const enlaces = Array.from(document.querySelectorAll('.menu a'))
+    .filter((a) => (a.getAttribute('href') || '').startsWith('#'));
   const secciones = enlaces
-    .map((a) => document.querySelector(a.getAttribute('href')))
+    .map((a) => document.getElementById(a.getAttribute('href').slice(1)))
     .filter(Boolean);
   if (!('IntersectionObserver' in window) || !secciones.length) return;
 
