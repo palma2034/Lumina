@@ -1,32 +1,51 @@
 /* ============================================================
-   LUMINA — script.js
-   Maneja la apertura y cierre del menú overlay.
+   LÚMINA STUDIO — script.js
+   1. Marca en el menú la sección que se está viendo.
+   2. Registra en el píxel de Meta cada clic a WhatsApp.
    ============================================================ */
 
-const abrir   = document.getElementById('abrirMenu');
-const cerrar  = document.getElementById('cerrarMenu');
-const menu    = document.getElementById('menuOverlay');
-
-// Abrir el menú
-abrir.addEventListener('click', () => {
-  menu.classList.add('abierto');
-  abrir.setAttribute('aria-expanded', 'true');
+// 0. Imágenes opcionales: quedan ocultas y solo aparecen si el archivo existe en /img
+document.querySelectorAll('img[data-opcional]').forEach((img) => {
+  const mostrar = () => {
+    if (!img.naturalWidth) return;
+    img.hidden = false;
+    const slot = img.closest('[data-slot]');
+    if (slot) slot.hidden = false;
+    // Si la imagen reemplaza un texto (por ejemplo, el logo), se oculta el texto
+    if (img.dataset.reemplaza) {
+      const texto = img.parentElement.querySelector(img.dataset.reemplaza);
+      if (texto) texto.hidden = true;
+    }
+  };
+  if (img.complete) mostrar();
+  else img.addEventListener('load', mostrar);
 });
 
-// Cerrar con la X
-cerrar.addEventListener('click', cerrarMenu);
+// 1. Menú activo según la sección visible
+(function () {
+  const enlaces = Array.from(document.querySelectorAll('.menu a'));
+  const secciones = enlaces
+    .map((a) => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+  if (!('IntersectionObserver' in window) || !secciones.length) return;
 
-// Cerrar al hacer clic en cualquier enlace (y deja que salte a la sección)
-menu.querySelectorAll('a').forEach((enlace) => {
-  enlace.addEventListener('click', cerrarMenu);
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      if (!entrada.isIntersecting) return;
+      enlaces.forEach((a) =>
+        a.classList.toggle('activo', a.getAttribute('href') === '#' + entrada.target.id)
+      );
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+
+  secciones.forEach((s) => observador.observe(s));
+})();
+
+// 2. Evento "Contact" del píxel al hacer clic en cualquier botón de WhatsApp
+document.querySelectorAll('.js-whatsapp').forEach((enlace) => {
+  enlace.addEventListener('click', () => {
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Contact', { content_name: 'WhatsApp', ubicacion: enlace.dataset.ubicacion || '' });
+    }
+  });
 });
-
-// Cerrar con la tecla Escape
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') cerrarMenu();
-});
-
-function cerrarMenu() {
-  menu.classList.remove('abierto');
-  abrir.setAttribute('aria-expanded', 'false');
-}

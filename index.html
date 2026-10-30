@@ -1,266 +1,492 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-  <title>Lumina — Asesoría para clínicas estéticas</title>
-  <meta name="description" content="Lumina es una consultora especializada en asesoría estratégica para clínicas estéticas. Realza el potencial de tu clínica." />
+  <!-- ============================ SEO ============================ -->
+  <title>Lúmina Studio | Pacientes nuevos cada mes para doctoras en estética</title>
+  <meta name="description" content="Captación de pacientes para doctoras en estética en todo Chile: anuncios en Instagram y Facebook para armonización facial, toxina botulínica, ácido hialurónico y más, con pacientes que te escriben directo a tu WhatsApp.">
+  <link rel="canonical" href="https://luminaconsultora.cl/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#244556">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <!-- Cómo se ve el link al compartirlo (WhatsApp, Instagram, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:site_name" content="Lúmina Studio">
+  <meta property="og:url" content="https://luminaconsultora.cl/">
+  <meta property="og:title" content="Lúmina Studio | Pacientes nuevos cada mes para tu consulta estética">
+  <meta property="og:description" content="Videos protagonizados por ti, anuncios en Instagram y Facebook, y pacientes que te escriben directo a tu WhatsApp.">
+  <meta property="og:image" content="https://luminaconsultora.cl/img/compartir.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Datos estructurados para Google -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://luminaconsultora.cl/#empresa",
+      "name": "Lúmina Studio",
+      "legalName": "Lúmina Consultores Limitada",
+      "url": "https://luminaconsultora.cl/",
+      "logo": "https://luminaconsultora.cl/img/icono-512.png",
+      "image": "https://luminaconsultora.cl/img/compartir.jpg",
+      "description": "Sistema de captación de pacientes para doctoras en estética en Chile, con anuncios en Instagram y Facebook que llevan a WhatsApp.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Chile"
+      },
+      "serviceType": "Captación de pacientes y publicidad en Instagram y Facebook para doctoras en estética",
+      "knowsAbout": [
+        "Armonización facial",
+        "Toxina botulínica (bótox)",
+        "Ácido hialurónico y rellenos",
+        "Perfilado de labios",
+        "Rinomodelación",
+        "Bioestimuladores de colágeno",
+        "Hilos tensores",
+        "Skinbooster y rejuvenecimiento facial",
+        "Tratamiento de manchas y calidad de piel",
+        "Reducción de papada"
+      ],
+      "telephone": "+56993099473",
+      "sameAs": [
+        "https://www.instagram.com/lumina.studio.pro/"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ya probé anuncios y no funcionaron. ¿Qué cambia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Casi siempre el problema está en el mensaje y en el formato. Trabajamos con videos tuyos y guiones pensados para generar confianza, y cada anuncio lleva a una conversación en tu WhatsApp, no a una página que la paciente abandona. Además ajustamos las campañas cada semana según lo que funciona."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "No me siento segura grabándome. ¿Igual puedo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Te damos el guion y las indicaciones, y los videos se graban con celular en tu consulta. Dicho eso, el sistema funciona porque las pacientes conectan contigo. Si no quieres aparecer en video, este servicio no es el adecuado para ti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "No tengo tiempo para meterme en otro proceso.",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tu parte es grabar los videos y responder los mensajes de WhatsApp como ya lo haces. Nosotros nos encargamos de los guiones, las campañas y su seguimiento. Nos reunimos periódicamente para revisar resultados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Tengo que cambiar mi forma de atender?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El sistema se adapta a tu flujo actual: tu agenda, tu WhatsApp y tu forma de cerrar. No instalamos plataformas nuevas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Funciona en mi ciudad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Trabajamos con doctoras en estética de todas las ciudades de Chile, desde Arica hasta Punta Arenas. Las campañas se segmentan a las personas que viven cerca de tu consulta, y en la primera conversación revisamos tu ciudad y tus tratamientos para armar la estrategia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El servicio de Lúmina es un plan mensual de $590.000, exento de IVA. La inversión en anuncios va aparte: la pagas directamente a Meta y defines el monto con nosotros según tus objetivos. Por WhatsApp te contamos qué incluye y te mostramos resultados reales antes de que tomes cualquier decisión."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 
   <!-- Tipografías -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="css/estilos.css">
 
-  <link rel="stylesheet" href="css/estilos.css" />
+  <!-- ===================== Píxel de Meta (Lúmina) ===================== -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2139043780332712');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=2139043780332712&ev=PageView&noscript=1"></noscript>
 </head>
-
 <body>
 
+<!-- ============================================================
+     ENCABEZADO: logo + menú horizontal centrado + botón WhatsApp.
+     Cada opción del menú salta a su sección de esta misma página.
+     ============================================================ -->
+<header class="encabezado">
+  <div class="contenedor">
+    <a class="logo" href="#inicio" aria-label="Lúmina Studio, ir al inicio">
+      <img class="logo-img" src="img/logo.png" alt="" width="36" height="36">
+      <span class="logo-texto">Lúmina<span>Studio</span></span>
+    </a>
+    <nav class="menu" aria-label="Secciones">
+      <ul>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#para-quien">Para quién</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+      </ul>
+    </nav>
+    <a class="boton boton-principal js-whatsapp" href="https://wa.me/56993099473?text=Hola%2C%20soy%20doctora%20y%20quiero%20saber%20m%C3%A1s%20sobre%20L%C3%BAmina%20Studio.%20Atiendo%20en%20%28ciudad%29%3A" target="_blank" rel="noopener" data-ubicacion="encabezado">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/></svg><span><span class="txt-largo">Escríbenos por </span>WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<main>
+
   <!-- ============================================================
-       ENCABEZADO: menú hamburguesa (arriba a la izquierda) + nombre
+       HERO
        ============================================================ -->
-  <header class="encabezado">
-    <div class="contenedor encabezado__interior">
+  <section class="hero" id="inicio">
+    <div class="contenedor">
+      <div class="hero-texto">
+        <p class="etiqueta">Captación de pacientes para doctoras en estética</p>
+        <h1>Pacientes nuevos cada mes, <em>para que tú te dediques a atender.</em></h1>
+        <p class="hero-largo">Diseñamos y operamos un sistema de anuncios en Instagram y Facebook protagonizado por ti, para tus tratamientos de armonización facial, toxina botulínica, ácido hialurónico y más. Tú grabas videos con guiones que escribimos para tu consulta, y las pacientes te escriben directo a tu WhatsApp.</p>
+        <p class="hero-corto">Tú grabas videos con guiones que escribimos para tu consulta. Nosotros hacemos los anuncios, y las pacientes te escriben directo a tu WhatsApp.</p>
+        <div class="hero-acciones">
+          <a class="boton boton-principal js-whatsapp" href="https://wa.me/56993099473?text=Hola%2C%20soy%20doctora%20y%20quiero%20saber%20m%C3%A1s%20sobre%20L%C3%BAmina%20Studio.%20Atiendo%20en%20%28ciudad%29%3A" target="_blank" rel="noopener" data-ubicacion="hero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/></svg>Conversemos por WhatsApp</a>
+          <a class="boton boton-texto" href="#como-funciona">Ver cómo funciona</a>
+        </div>
+        <a class="prueba" href="#resultados">
+          <span class="prueba-avatar" aria-hidden="true">RN</span>
+          <span class="prueba-texto"><strong>Dra. Romina Navarrete</strong>, Antofagasta<br><span class="prueba-cifra">51 agendas</span> en su primer mes</span>
+          <span class="prueba-link">Ver testimonio <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
 
-      <!-- Botón hamburguesa, a la izquierda -->
-      <button class="hamburguesa" id="abrirMenu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuOverlay">
-        <span></span><span></span><span></span>
-      </button>
+      <!-- Ilustración del sistema: anuncio protagonizado por la doctora + mensajes que llegan -->
+      <div class="hero-visual" aria-label="Ilustración: un anuncio en video de la doctora y mensajes de pacientes llegando a su WhatsApp" role="img">
+        <div class="telefono">
+          <div class="reel">
+            <img class="reel-foto" data-opcional src="img/hero-doctora.jpg" alt="" width="540" height="960" hidden>
+            <div class="reel-capa">
+              <div class="reel-cuenta"><span class="reel-avatar"></span><span><b>tu.consulta</b><br>Publicidad</span></div>
+              <p class="reel-subtitulo">“¿Te da miedo quedar con la cara congelada con el bótox? Te cuento cómo lo trabajo yo.”</p>
+              <div class="reel-boton">Enviar mensaje de WhatsApp</div>
+              <div class="reel-progreso"><span></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="notis" aria-hidden="true">
+          <div class="noti"><span class="noti-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/></svg></span><span><b>Paciente nueva</b><em>ahora</em><br>Hola doctora, vi su video. ¿Cuánto sale el bótox?</span></div>
+          <div class="noti"><span class="noti-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/></svg></span><span><b>Paciente nueva</b><em>4 min</em><br>Hola! Tengo arrugas en el entrecejo, ¿qué me recomienda?</span></div>
+          <div class="noti"><span class="noti-icono"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/></svg></span><span><b>Paciente nueva</b><em>12 min</em><br>¿Atiende el sábado? Me interesa el tratamiento de labios</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <!-- Logo SVG centrado -->
-      <a href="#inicio" class="marca" aria-label="Lumina — inicio">
-        <svg width="56" height="56" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="110" cy="110" r="104" fill="#33282a"/>
-          <circle cx="110" cy="110" r="98" fill="none" stroke="#c4a160" stroke-width="2"/>
-          <text x="76" y="152" font-family="Cormorant Garamond, Georgia, serif" font-size="90" font-weight="500" fill="#f9f4ee" text-anchor="middle">L</text>
-          <text x="144" y="152" font-family="Cormorant Garamond, Georgia, serif" font-size="90" font-weight="500" fill="#f9f4ee" text-anchor="middle">S</text>
-          <path d="M110,48 L115,82 L149,84 L115,86 L110,120 L105,86 L71,84 L105,82 Z" fill="#c4a160"/>
-        </svg>
+  <!-- ============================================================
+       EL PROBLEMA
+       ============================================================ -->
+  <section class="seccion problema" aria-labelledby="titulo-problema">
+    <div class="contenedor">
+      <div class="problema-cabeza">
+        <div class="seccion-cabeza">
+          <p class="etiqueta">Lo que vemos en cada consulta</p>
+          <h2 id="titulo-problema">Tener una buena consulta no garantiza una agenda llena.</h2>
+          <p>¿Cómo viene tu próxima semana? Si te dedicas a la estética, probablemente conoces estas situaciones.</p>
+        </div>
+        <figure class="agenda agenda-vacia"><figcaption class="agenda-cabeza"><span class="etiqueta">Tu semana hoy</span><span class="agenda-resumen"><b>7</b> de 30 horas agendadas</span></figcaption><div class="gcal" aria-hidden="true"><div class="gcal-barra"><span class="gcal-hoy">Hoy</span><span class="gcal-flechas">‹ ›</span><span class="gcal-mes">noviembre de 2026</span><span class="gcal-vista">Semana</span></div><div class="gcal-grilla"><div class="gc-esquina"></div><div class="gc-dia"><small>LUN</small><b>2</b></div><div class="gc-dia"><small>MAR</small><b>3</b></div><div class="gc-dia hoy"><small>MIÉ</small><b>4</b></div><div class="gc-dia"><small>JUE</small><b>5</b></div><div class="gc-dia"><small>VIE</small><b>6</b></div><div class="gc-hora">10:00</div><div class="gc-celda"></div><div class="gc-celda"><div class="ev ev-c1"><b>Toxina</b><span>10:00 – 11:00</span></div></div><div class="gc-celda"></div><div class="gc-celda"></div><div class="gc-celda"></div><div class="gc-hora">11:00</div><div class="gc-celda"></div><div class="gc-celda"></div><div class="gc-celda"></div><div class="gc-celda"><div class="ev ev-c2"><b>Labios</b><span>11:00 – 12:00</span></div></div><div class="gc-celda"></div><div class="gc-hora">12:00</div><div class="gc-celda"><div class="ev ev-c2"><b>Rellenos</b><span>12:00 – 13:00</span></div></div><div class="gc-celda"></div><div class="gc-celda"></div><div class="gc-celda"></div><div class="gc-celda"></div><div class="gc-hora">13:00</div><div class="gc-celda"></div><div class="gc-celda"></div><div class="gc-celda"><div class="ev ev-c3"><b>Evaluación</b><span>13:00 – 14:00</span></div></div><div class="gc-celda"></div><div class="gc-celda"><div class="ev ev-c0"><b>Control</b><span>13:00 – 14:00</span></div></div><div class="gc-hora">14:00</div><div class="gc-celda"></div><div class="gc-celda"><div class="ev ev-c0"><b>Ojeras</b><span>14:00 – 15:00</span></div></div><div class="gc-celda"></div><div class="gc-celda"></div><div class="gc-celda"></div><div class="gc-hora">15:00</div><div class="gc-celda"></div><div class="gc-celda"></div><div class="gc-celda"></div><div class="gc-celda"><div class="ev ev-c1"><b>Hilos</b><span>15:00 – 16:00</span></div></div><div class="gc-celda"></div></div></div></figure>
+      </div>
+      <div class="situaciones">
+        <div class="situacion">
+          <h3>No sabes cómo vendrá la próxima semana</h3>
+          <p>Hoy la agenda está bien, pero no tienes cómo saber si mañana tendrás las pacientes que necesitas. Depende de recomendaciones y de que algún contenido funcione.</p>
+        </div>
+        <div class="situacion">
+          <h3>Las metas de ingreso no se cumplen</h3>
+          <p>Te pones un número para el mes y llegas a fin de mes sin alcanzarlo. Los anuncios que probaste por tu cuenta dejaron 2 o 3 pacientes nuevos, no lo que tu consulta necesita.</p>
+        </div>
+        <div class="situacion">
+          <h3>Estás a cargo de todo al mismo tiempo</h3>
+          <p>Atiendes, te preocupas de que cada paciente salga feliz y además tienes que pensar cómo conseguir las próximas. Esa doble carga cansa y se nota.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EL DESEO: cómo se ve la consulta cuando la captación funciona
+       ============================================================ -->
+  <section class="seccion deseo" aria-labelledby="titulo-deseo">
+    <div class="contenedor">
+      <div class="deseo-visual">
+        <figure class="agenda agenda-llena"><figcaption class="agenda-cabeza"><span class="etiqueta">Tu semana con un sistema</span><span class="agenda-resumen"><b>28</b> de 30 horas agendadas</span></figcaption><div class="gcal" aria-hidden="true"><div class="gcal-barra"><span class="gcal-hoy">Hoy</span><span class="gcal-flechas">‹ ›</span><span class="gcal-mes">noviembre de 2026</span><span class="gcal-vista">Semana</span></div><div class="gcal-grilla"><div class="gc-esquina"></div><div class="gc-dia"><small>LUN</small><b>2</b></div><div class="gc-dia"><small>MAR</small><b>3</b></div><div class="gc-dia hoy"><small>MIÉ</small><b>4</b></div><div class="gc-dia"><small>JUE</small><b>5</b></div><div class="gc-dia"><small>VIE</small><b>6</b></div><div class="gc-hora">10:00</div><div class="gc-celda"><div class="ev ev-c0"><b>Toxina</b><span>10:00 – 11:00</span></div></div><div class="gc-celda"><div class="ev ev-c0"><b>Labios</b><span>10:00 – 11:00</span></div></div><div class="gc-celda"><div class="ev ev-c0"><b>Rellenos</b><span>10:00 – 11:00</span></div></div><div class="gc-celda"><div class="ev ev-c0"><b>Evaluación</b><span>10:00 – 11:00</span></div></div><div class="gc-celda"><div class="ev ev-c0"><b>Control</b><span>10:00 – 11:00</span></div></div><div class="gc-hora">11:00</div><div class="gc-celda"><div class="ev ev-c3"><b>Ojeras</b><span>11:00 – 12:00</span></div></div><div class="gc-celda"><div class="ev ev-c3"><b>Hilos</b><span>11:00 – 12:00</span></div></div><div class="gc-celda"><div class="ev ev-c3"><b>Papada</b><span>11:00 – 12:00</span></div></div><div class="gc-celda"><div class="ev ev-c3"><b>Toxina</b><span>11:00 – 12:00</span></div></div><div class="gc-celda"><div class="ev ev-c3"><b>Labios</b><span>11:00 – 12:00</span></div></div><div class="gc-hora">12:00</div><div class="gc-celda"><div class="ev ev-c2"><b>Rellenos</b><span>12:00 – 13:00</span></div></div><div class="gc-celda"><div class="ev ev-c2"><b>Evaluación</b><span>12:00 – 13:00</span></div></div><div class="gc-celda"></div><div class="gc-celda"><div class="ev ev-c3"><b>Control</b><span>12:00 – 13:00</span></div></div><div class="gc-celda"><div class="ev ev-c3"><b>Ojeras</b><span>12:00 – 13:00</span></div></div><div class="gc-hora">13:00</div><div class="gc-celda"><div class="ev ev-c2"><b>Hilos</b><span>13:00 – 14:00</span></div></div><div class="gc-celda"><div class="ev ev-c2"><b>Papada</b><span>13:00 – 14:00</span></div></div><div class="gc-celda"><div class="ev ev-c2"><b>Toxina</b><span>13:00 – 14:00</span></div></div><div class="gc-celda"><div class="ev ev-c2"><b>Labios</b><span>13:00 – 14:00</span></div></div><div class="gc-celda"><div class="ev ev-c2"><b>Rellenos</b><span>13:00 – 14:00</span></div></div><div class="gc-hora">14:00</div><div class="gc-celda"><div class="ev ev-c1"><b>Evaluación</b><span>14:00 – 15:00</span></div></div><div class="gc-celda"><div class="ev ev-c1"><b>Control</b><span>14:00 – 15:00</span></div></div><div class="gc-celda"><div class="ev ev-c1"><b>Ojeras</b><span>14:00 – 15:00</span></div></div><div class="gc-celda"><div class="ev ev-c1"><b>Hilos</b><span>14:00 – 15:00</span></div></div><div class="gc-celda"><div class="ev ev-c1"><b>Papada</b><span>14:00 – 15:00</span></div></div><div class="gc-hora">15:00</div><div class="gc-celda"><div class="ev ev-c0"><b>Toxina</b><span>15:00 – 16:00</span></div></div><div class="gc-celda"><div class="ev ev-c0"><b>Labios</b><span>15:00 – 16:00</span></div></div><div class="gc-celda"><div class="ev ev-c0"><b>Rellenos</b><span>15:00 – 16:00</span></div></div><div class="gc-celda"><div class="ev ev-c0"><b>Evaluación</b><span>15:00 – 16:00</span></div></div><div class="gc-celda"></div></div></div></figure>
+        <div class="burbuja" role="img" aria-label="Ilustración: mensaje de una paciente agradeciendo a su doctora">
+          <p>Doctora, quedé feliz con el resultado. ¡Muchas gracias por todo!</p>
+          <span class="burbuja-hora">19:42 <svg viewBox="0 0 18 12" aria-hidden="true"><path d="M1 6.5 4.5 10 11 2M7 10l1 0L16 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </div>
+      <div class="deseo-texto">
+        <p class="etiqueta">Lo que buscamos para ti</p>
+        <h2 id="titulo-deseo">Saber que mañana vas a tener las pacientes que quieres.</h2>
+        <p>Cuando la captación funciona como un sistema, dejas de pensar en ella. Tu energía vuelve a donde tiene que estar: en atender bien a cada paciente.</p>
+      <ul class="deseo-lista">
+        <li>
+          <h3>Tranquilidad</h3>
+          <p>Abres la semana sabiendo que llegarán pacientes nuevos, sin depender de que alguien te recomiende.</p>
+        </li>
+        <li>
+          <h3>Foco en tu servicio</h3>
+          <p>Te dedicas solo a atender. La captación la llevamos nosotros.</p>
+        </li>
+        <li>
+          <h3>Pacientes que valoran tu trabajo</h3>
+          <p>Llegan porque ya te vieron y confían en ti. No te piden descuento, se van felices y después te escriben para darte las gracias.</p>
+        </li>
+      </ul>
+      </div>
+      <p class="problema-cierre">La captación de pacientes debería ser un sistema que funciona cada mes, no una preocupación diaria.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CÓMO FUNCIONA (es una secuencia real, por eso va numerada)
+       ============================================================ -->
+  <section class="seccion" id="como-funciona" aria-labelledby="titulo-como">
+    <div class="contenedor">
+      <div class="como-cabeza">
+        <div class="seccion-cabeza">
+          <p class="etiqueta">Cómo funciona</p>
+          <h2 id="titulo-como">Un sistema completo, adaptado a la forma en que ya trabajas.</h2>
+          <p>Las pacientes llegan porque conectan contigo antes de escribirte. Por eso tú eres la protagonista, y nosotros nos encargamos del resto.</p>
+        </div>
+        <figure class="foto-slot" data-slot hidden>
+          <img data-opcional src="img/grabando.jpg" alt="Doctora grabando un video para sus anuncios en su consulta" width="800" height="1000">
+        </figure>
+      </div>
+      <ol class="pasos">
+        <li class="paso">
+          <span class="paso-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M8.5 13h7M8.5 16.5h5"/></svg></span>
+          <span class="quien">Lúmina</span>
+          <h3>Guiones para tu consulta</h3>
+          <p>Escribimos los guiones a partir de tus tratamientos y de lo que tus pacientes te preguntan y sienten antes de agendar.</p>
+        </li>
+        <li class="paso">
+          <span class="paso-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M10.5 18.5h3"/></svg></span>
+          <span class="quien">Tú</span>
+          <h3>Grabas los videos</h3>
+          <p>En tu consulta, con tu celular y con indicaciones nuestras. Si lo prefieres, coordinamos una realizadora audiovisual.</p>
+        </li>
+        <li class="paso">
+          <span class="paso-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 13.5V10a1 1 0 0 1 1-1h3l8-4.5v15L7 15H4a1 1 0 0 1-1-1.5Z"/><path d="M7 15l1.5 5M18.5 9.5a3.5 3.5 0 0 1 0 5"/></svg></span>
+          <span class="quien">Lúmina</span>
+          <h3>Campañas en Instagram y Facebook</h3>
+          <p>Publicamos, medimos y ajustamos los anuncios cada semana. Cada anuncio lleva a una conversación en tu WhatsApp.</p>
+        </li>
+        <li class="paso">
+          <span class="paso-icono" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="1.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8 13.5h3M8 16.5h6"/></svg></span>
+          <span class="quien">Juntos</span>
+          <h3>Reuniones periódicas</h3>
+          <p>Revisamos resultados, escuchamos lo que ves en la consulta y te asesoramos en cómo responder los mensajes de WhatsApp para que más conversaciones terminen en una agenda.</p>
+        </li>
+      </ol>
+      <div class="sin-cambios">
+        <p class="tu-parte"><span class="etiqueta">Tu parte</span>Grabar los videos y responder tu WhatsApp, como ya lo haces.</p>
+        <ul>
+          <li>Sin plataformas nuevas</li>
+          <li>Sin sistemas de gestión adicionales</li>
+          <li>Sin cambiar tu forma de atender</li>
+        </ul>
+      </div>
+      <div class="cta-intermedio"><a class="boton boton-principal js-whatsapp" href="https://wa.me/56993099473?text=Hola%2C%20soy%20doctora%20y%20quiero%20saber%20m%C3%A1s%20sobre%20L%C3%BAmina%20Studio.%20Atiendo%20en%20%28ciudad%29%3A" target="_blank" rel="noopener" data-ubicacion="tras-como-funciona"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/></svg>Quiero ver si aplica a mi consulta</a><p>Sin compromiso. Te respondemos personalmente.</p></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRATAMIENTOS (también ayuda al SEO)
+       ============================================================ -->
+  <section class="seccion tratamientos" id="tratamientos" aria-labelledby="titulo-tratamientos">
+    <div class="contenedor">
+      <div class="seccion-cabeza">
+        <p class="etiqueta">Tratamientos</p>
+        <h2 id="titulo-tratamientos">Campañas para los tratamientos que realizas en tu consulta.</h2>
+        <p>Cada tratamiento tiene una paciente distinta y dudas distintas. Por eso los guiones y los anuncios se arman para lo que tú ofreces, no con un mensaje genérico de estética.</p>
+      </div>
+      <ul class="lista-tratamientos">
+        <li>Armonización facial</li>
+        <li>Toxina botulínica (bótox)</li>
+        <li>Ácido hialurónico y rellenos</li>
+        <li>Perfilado de labios</li>
+        <li>Rinomodelación</li>
+        <li>Bioestimuladores de colágeno</li>
+        <li>Hilos tensores</li>
+        <li>Skinbooster y rejuvenecimiento facial</li>
+        <li>Tratamiento de manchas y calidad de piel</li>
+        <li>Reducción de papada</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RESULTADOS (solo casos reales de clientas)
+       ============================================================ -->
+  <section class="seccion resultados" id="resultados" aria-labelledby="titulo-resultados">
+    <div class="contenedor">
+      <div class="seccion-cabeza">
+        <p class="etiqueta">Resultados</p>
+        <h2 id="titulo-resultados">Lo que pasa cuando la agenda deja de depender del azar.</h2>
+        <p>Nuestro objetivo con cada doctora es un flujo sostenido de más de 30 pacientes nuevos al mes.</p>
+      </div>
+      <div class="resultados-grilla">
+      <figure class="video-testimonio">
+        <div class="video-marco"><iframe src="https://www.youtube-nocookie.com/embed/yw9X26Ml8X0?rel=0" title="Testimonio de una clienta de Lúmina Studio" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption>Dra. Romina Navarrete · Antofagasta</figcaption>
+      </figure>
+      <div class="casos">
+        <article class="caso">
+          <p class="etiqueta">Dra. Romina Navarrete · Antofagasta</p>
+          <div class="caso-cifra">51<span>agendas cerradas</span></div>
+          <p>En su primer mes de campaña con Lúmina cerró 51 agendas, con el mismo presupuesto en anuncios que ya invertía cuando hacía sus campañas por su cuenta.</p>
+          <dl class="caso-detalle">
+            <div><dt>Presupuesto en anuncios</dt><dd>El mismo de antes</dd></div>
+            <div><dt>Videos</dt><dd>Grabados por ella</dd></div>
+            <div><dt>Contacto con pacientes</dt><dd>Directo a su WhatsApp</dd></div>
+          </dl>
+        </article>
+      </div>
+      </div>
+      <p class="resultados-nota">Cada paciente nueva que vuelve a tu consulta suma a una base que crece mes a mes. Ahí está el valor que no se ve en una campaña aislada.</p>
+      <div class="cta-intermedio"><a class="boton boton-ambar js-whatsapp" href="https://wa.me/56993099473?text=Hola%2C%20soy%20doctora%20y%20quiero%20saber%20m%C3%A1s%20sobre%20L%C3%BAmina%20Studio.%20Atiendo%20en%20%28ciudad%29%3A" target="_blank" rel="noopener" data-ubicacion="tras-resultados"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/></svg>Conversemos sobre tu consulta</a><p>Sin compromiso. Te respondemos personalmente.</p></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PARA QUIÉN ES
+       ============================================================ -->
+  <section class="seccion" id="para-quien" aria-labelledby="titulo-quien">
+    <div class="contenedor">
+      <div class="seccion-cabeza">
+        <p class="etiqueta">Para quién es</p>
+        <h2 id="titulo-quien">Trabajamos con un perfil específico, porque así funciona mejor.</h2>
+      </div>
+      <div class="perfil">
+        <div class="lista-perfil si">
+          <h3>Es para ti si…</h3>
+          <ul>
+            <li>Eres doctora y te dedicas a la estética, con consulta propia o arrendada.</li>
+            <li>Atiendes personalmente y trabajas con tu propio nombre.</li>
+            <li>Usas WhatsApp como canal principal con tus pacientes.</li>
+            <li>Te sientes cómoda hablando frente a cámara.</li>
+            <li>Quieres crecer sin depender solo del boca a boca.</li>
+          </ul>
+        </div>
+        <div class="lista-perfil no">
+          <h3>No es para ti si…</h3>
+          <ul>
+            <li>Formas parte de una clínica o trabajas bajo una marca de clínica.</li>
+            <li>Prefieres no aparecer en los videos.</li>
+            <li>Buscas resultados inmediatos de una sola campaña.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PREGUNTAS FRECUENTES
+       ============================================================ -->
+  <section class="seccion preguntas" id="preguntas" aria-labelledby="titulo-preguntas">
+    <div class="contenedor">
+      <div class="seccion-cabeza">
+        <p class="etiqueta">Preguntas frecuentes</p>
+        <h2 id="titulo-preguntas">Lo que nos preguntan antes de empezar.</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Ya probé anuncios y no funcionaron. ¿Qué cambia?</summary>
+          <p>Casi siempre el problema está en el mensaje y en el formato. Trabajamos con videos tuyos y guiones pensados para generar confianza, y cada anuncio lleva a una conversación en tu WhatsApp, no a una página que la paciente abandona. Además ajustamos las campañas cada semana según lo que funciona.</p>
+        </details>
+        <details>
+          <summary>No me siento segura grabándome. ¿Igual puedo?</summary>
+          <p>Te damos el guion y las indicaciones, y los videos se graban con celular en tu consulta. Dicho eso, el sistema funciona porque las pacientes conectan contigo. Si no quieres aparecer en video, este servicio no es el adecuado para ti.</p>
+        </details>
+        <details>
+          <summary>No tengo tiempo para meterme en otro proceso.</summary>
+          <p>Tu parte es grabar los videos y responder los mensajes de WhatsApp como ya lo haces. Nosotros nos encargamos de los guiones, las campañas y su seguimiento. Nos reunimos periódicamente para revisar resultados.</p>
+        </details>
+        <details>
+          <summary>¿Tengo que cambiar mi forma de atender?</summary>
+          <p>No. El sistema se adapta a tu flujo actual: tu agenda, tu WhatsApp y tu forma de cerrar. No instalamos plataformas nuevas.</p>
+        </details>
+        <details>
+          <summary>¿Funciona en mi ciudad?</summary>
+          <p>Sí. Trabajamos con doctoras en estética de todas las ciudades de Chile, desde Arica hasta Punta Arenas. Las campañas se segmentan a las personas que viven cerca de tu consulta, y en la primera conversación revisamos tu ciudad y tus tratamientos para armar la estrategia.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto cuesta?</summary>
+          <p>El servicio de Lúmina es un plan mensual de $590.000, exento de IVA. La inversión en anuncios va aparte: la pagas directamente a Meta y defines el monto con nosotros según tus objetivos. Por WhatsApp te contamos qué incluye y te mostramos resultados reales antes de que tomes cualquier decisión.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACTO
+       ============================================================ -->
+  <section class="contacto" id="contacto" aria-labelledby="titulo-contacto">
+    <div class="contacto-banner" data-slot hidden>
+      <img data-opcional src="img/banner-contacto.jpg" alt="Doctora en estética revisando en su celular los mensajes de pacientes nuevas" width="1376" height="768">
+    </div>
+    <div class="contenedor contacto-texto">
+      <p class="etiqueta">Contacto</p>
+      <h2 id="titulo-contacto">Conversemos sobre tu consulta.</h2>
+      <p>Escríbenos por WhatsApp contándonos en qué ciudad atiendes y qué tratamientos realizas. Te respondemos personalmente.</p>
+      <a class="boton boton-principal js-whatsapp" href="https://wa.me/56993099473?text=Hola%2C%20soy%20doctora%20y%20quiero%20saber%20m%C3%A1s%20sobre%20L%C3%BAmina%20Studio.%20Atiendo%20en%20%28ciudad%29%3A" target="_blank" rel="noopener" data-ubicacion="contacto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/></svg>Escribir por WhatsApp</a>
+      <p class="contacto-dato">WhatsApp: <strong>+56 9 9309 9473</strong></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <span class="pie-marca"><img src="img/logo.png" alt="" width="28" height="28"><span>© 2026 Lúmina Studio · Lúmina Consultores Ltda. · Chile</span></span>
+    <nav class="redes" aria-label="Redes sociales">
+      <a href="https://www.instagram.com/lumina.studio.pro/" target="_blank" rel="noopener" aria-label="Instagram de Lúmina Studio">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>
       </a>
+      <a class="js-whatsapp" href="https://wa.me/56993099473?text=Hola%2C%20soy%20doctora%20y%20quiero%20saber%20m%C3%A1s%20sobre%20L%C3%BAmina%20Studio.%20Atiendo%20en%20%28ciudad%29%3A" target="_blank" rel="noopener" data-ubicacion="pie" aria-label="WhatsApp de Lúmina Studio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/></svg></a>
+    </nav>
+  </div>
+</footer>
 
-      <!-- Espaciador para mantener el logo centrado -->
-      <span class="encabezado__espaciador" aria-hidden="true"></span>
-    </div>
-  </header>
+<!-- Barra fija de WhatsApp (solo en celular) -->
+<div class="barra-wa">
+  <a class="boton boton-principal js-whatsapp" href="https://wa.me/56993099473?text=Hola%2C%20soy%20doctora%20y%20quiero%20saber%20m%C3%A1s%20sobre%20L%C3%BAmina%20Studio.%20Atiendo%20en%20%28ciudad%29%3A" target="_blank" rel="noopener" data-ubicacion="barra-celular"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/></svg>Escribir por WhatsApp</a>
+</div>
 
-  <!-- ============================================================
-       MENÚ OVERLAY: se abre al tocar la hamburguesa.
-       Cada enlace salta a su sección.
-       ============================================================ -->
-  <nav class="menu-overlay" id="menuOverlay" aria-label="Navegación principal">
-    <button class="menu-overlay__cerrar" id="cerrarMenu" aria-label="Cerrar menú">&times;</button>
-    <ul>
-      <li><a href="#nosotros">Quiénes somos</a></li>
-      <li><a href="#testimonios">Testimonios</a></li>
-      <li><a href="#contacto">Trabaja con nosotros</a></li>
-    </ul>
-  </nav>
-
-  <main>
-
-    <!-- ============================================================
-         HERO: presentación de la marca con efecto de luz
-         ============================================================ -->
-    <section class="hero" id="inicio">
-      <div class="hero__luz" aria-hidden="true"></div>
-      <div class="contenedor hero__interior">
-        <p class="eyebrow">Consultora · Clínicas estéticas</p>
-        <h1 class="hero__titulo">Lumina</h1>
-        <p class="hero__bajada">
-          Realzamos el potencial de tu clínica estética con asesoría
-          estratégica, cercana y a la medida.
-        </p>
-        <a href="#contacto" class="boton">Trabaja con nosotros</a>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         QUIÉNES SOMOS
-         ============================================================ -->
-    <section class="seccion" id="nosotros">
-      <div class="contenedor seccion--angosta">
-        <p class="eyebrow">Quiénes somos</p>
-        <h2 class="seccion__titulo">Asesoría que ilumina el camino</h2>
-
-        <!-- EDITA ESTO: tu texto real de presentación -->
-        <p class="texto-grande">
-          En Lumina acompañamos a clínicas estéticas a crecer con claridad.
-          Combinamos experiencia en gestión, marketing y operaciones para que
-          tu clínica brille por dentro y por fuera.
-        </p>
-        <p>
-          Trabajamos de la mano contigo para entender tu realidad, detectar
-          oportunidades y construir un plan concreto. Sin fórmulas genéricas:
-          cada clínica es distinta, y nuestra asesoría también.
-        </p>
-
-        <!-- Tres pilares (edita libremente o elimina este bloque) -->
-        <div class="pilares">
-          <div class="pilar">
-            <span class="pilar__numero">01</span>
-            <h3>Estrategia</h3>
-            <p>Un plan claro y accionable, pensado para tu clínica.</p>
-          </div>
-          <div class="pilar">
-            <span class="pilar__numero">02</span>
-            <h3>Operación</h3>
-            <p>Procesos que ordenan el día a día y liberan tu tiempo.</p>
-          </div>
-          <div class="pilar">
-            <span class="pilar__numero">03</span>
-            <h3>Crecimiento</h3>
-            <p>Más pacientes y mejores resultados, de forma sostenible.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         TESTIMONIOS
-         ============================================================ -->
-    <section class="seccion seccion--alt" id="testimonios">
-      <div class="contenedor">
-        <header class="seccion__cabecera">
-          <p class="eyebrow">Testimonios</p>
-          <h2 class="seccion__titulo">Lo que dicen nuestras clínicas</h2>
-        </header>
-
-        <div class="grilla-testimonios">
-
-          <!-- EDITA ESTO: reemplaza las citas por las reales -->
-          <figure class="testimonio">
-            <blockquote>
-              "Lumina transformó la forma en que gestionamos nuestra clínica.
-              Su asesoría fue clara, práctica y con resultados desde el primer mes."
-            </blockquote>
-            <figcaption>
-              <strong>Dr. José Antonio Zavala</strong>
-              <span>Médico Cirujano Estético</span>
-            </figcaption>
-          </figure>
-
-          <figure class="testimonio">
-            <blockquote>
-              "Gracias a Lumina pudimos ordenar nuestros procesos y enfocarnos
-              en lo que de verdad importa: nuestros pacientes."
-            </blockquote>
-            <figcaption>
-              <strong>Dr. Oscar Águila</strong>
-              <span>Especialista en Medicina Estética</span>
-            </figcaption>
-          </figure>
-
-          <figure class="testimonio">
-            <blockquote>
-              "Un equipo excepcional. Entienden el mundo de las clínicas estéticas
-              y saben exactamente cómo acompañarte a crecer."
-            </blockquote>
-            <figcaption>
-              <strong>Dra. Oriana León</strong>
-              <span>Directora Médica</span>
-            </figcaption>
-          </figure>
-
-        </div>
-      </div>
-
-        <!-- Video YouTube -->
-        <div class="video-contenedor">
-          <iframe
-            src="https://www.youtube.com/embed/yw9X26Ml8X0"
-            title="Video Lumina"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-    </section>
-
-    <!-- ============================================================
-         TRABAJA CON NOSOTROS (formulario)
-         ============================================================ -->
-    <section class="seccion" id="contacto">
-      <div class="contenedor seccion--angosta seccion--centrada">
-        <p class="eyebrow">Trabaja con nosotros</p>
-        <h2 class="seccion__titulo">Conversemos sobre tu clínica</h2>
-        <p class="texto-grande">
-          Cuéntanos qué necesitas y te contactaremos para ver cómo podemos
-          ayudarte.
-        </p>
-
-        <!-- Formulario: por ahora es visual. Para activarlo, ver el README. -->
-        <form class="formulario" action="https://formspree.io/f/mkodnlwy" method="POST">
-          <label>
-            Nombre
-            <input type="text" name="nombre" placeholder="Tu nombre" required />
-          </label>
-          <label>
-            Correo
-            <input type="email" name="correo" placeholder="tucorreo@ejemplo.cl" required />
-          </label>
-          <label>
-            ¿Qué necesitas?
-            <textarea name="mensaje" rows="5" placeholder="Cuéntanos sobre tu clínica y en qué te gustaría que te ayudemos" required></textarea>
-          </label>
-          <button type="submit" class="boton">Enviar mensaje</button>
-        </form>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ============================================================
-       PIE DE PÁGINA: redes (Instagram, WhatsApp, Mail)
-       Reemplaza los href="#" por tus enlaces reales.
-       ============================================================ -->
-  <footer class="pie">
-    <div class="contenedor pie__interior">
-      <span class="pie__marca">Lumina</span>
-
-      <nav class="redes" aria-label="Redes sociales">
-        <!-- Instagram: pon tu URL, ej. https://instagram.com/tu_cuenta -->
-        <a href="https://www.instagram.com/lumina.studio.pro/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2.5" y="2.5" width="19" height="19" rx="5" />
-            <circle cx="12" cy="12" r="4.2" />
-            <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none" />
-          </svg>
-        </a>
-
-        <!-- WhatsApp: usa https://wa.me/569XXXXXXXX -->
-        <a href="#" aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5Z" />
-            <path d="M8.4 7.8c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 3 4.5 4 .6.3 1.1.4 1.5.5.6.1 1.1.1 1.6 0 .5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3l-1.6-.8c-.2-.1-.4-.1-.6.1l-.6.8c-.1.1-.2.1-.4 0-.6-.2-1.3-.6-2-1.4-.5-.6-.9-1.2-1-1.4-.1-.2 0-.3.1-.4l.4-.5c.1-.1.1-.2.2-.4 0-.1 0-.3 0-.4l-.7-1.6c-.2-.4-.3-.4-.5-.4Z" fill="currentColor" stroke="none" />
-          </svg>
-        </a>
-
-        <!-- Correo: usa mailto:hola@lumina.cl -->
-        <a href="#" aria-label="Correo">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
-            <path d="m3 6 9 6 9-6" />
-          </svg>
-        </a>
-      </nav>
-
-      <span class="pie__copy">© 2026 Lumina. Todos los derechos reservados.</span>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
-
-  <!-- ============================================================
-       BOTÓN FLOTANTE DE WHATSAPP
-       ============================================================ -->
-  <a href="https://wa.me/56976203655" target="_blank" rel="noopener noreferrer" class="whatsapp-flotante" aria-label="Contáctanos por WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5Z" fill="#f9f4ee" stroke="#f9f4ee" stroke-width="0.3"/>
-      <path d="M8.4 7.8c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 3 4.5 4 .6.3 1.1.4 1.5.5.6.1 1.1.1 1.6 0 .5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3l-1.6-.8c-.2-.1-.4-.1-.6.1l-.6.8c-.1.1-.2.1-.4 0-.6-.2-1.3-.6-2-1.4-.5-.6-.9-1.2-1-1.4-.1-.2 0-.3.1-.4l.4-.5c.1-.1.1-.2.2-.4 0-.1 0-.3 0-.4l-.7-1.6c-.2-.4-.3-.4-.5-.4Z" fill="#33282a"/>
-    </svg>
-  </a>
-
+<script src="js/script.js"></script>
 </body>
 </html>
