@@ -52,6 +52,63 @@ document.querySelectorAll('.js-whatsapp').forEach((enlace) => {
   });
 });
 
+// 3. Video del celular en el inicio: subtítulos que se iluminan al ritmo de la doctora
+(function () {
+  const video = document.getElementById('reel-video');
+  const sub = document.querySelector('.reel-subtitulo');
+  const barra = document.querySelector('.reel-progreso span');
+  if (!video || !sub) return;
+
+  // Si la persona prefiere menos movimiento, se queda la imagen fija con el texto completo
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    video.removeAttribute('autoplay');
+    video.pause();
+    return;
+  }
+
+  // Tramos en que habla (segundos), medidos en el audio original del video
+  const FRASES = [[0.45, 3.55], [4.95, 6.35]];
+  const palabras = sub.textContent.trim().split(/\s+/);
+  const corte = palabras.findIndex((p) => p.includes('?')) + 1 || Math.ceil(palabras.length / 2);
+  const grupos = [palabras.slice(0, corte), palabras.slice(corte)];
+  sub.textContent = '';
+  const spans = [];
+  grupos.forEach((grupo, g) => {
+    const [desde, hasta] = FRASES[g] || FRASES[FRASES.length - 1];
+    const paso = (hasta - desde) / Math.max(grupo.length, 1);
+    grupo.forEach((texto, i) => {
+      const s = document.createElement('span');
+      s.textContent = texto + ' ';
+      s.dataset.t = (desde + paso * i).toFixed(2);
+      sub.appendChild(s);
+      spans.push(s);
+    });
+  });
+
+  let animando = false;
+  const pintar = () => {
+    const t = video.currentTime;
+    spans.forEach((s) => s.classList.toggle('dicha', t >= parseFloat(s.dataset.t)));
+    if (barra && video.duration) barra.style.width = (t / video.duration * 100).toFixed(1) + '%';
+    if (animando) requestAnimationFrame(pintar);
+  };
+  video.addEventListener('playing', () => {
+    sub.classList.add('karaoke');
+    if (!animando) { animando = true; requestAnimationFrame(pintar); }
+  });
+  video.addEventListener('pause', () => { animando = false; });
+
+  // Solo se reproduce cuando el celular está a la vista (ahorra batería y datos)
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((entradas) => {
+      entradas.forEach((e) => {
+        if (e.isIntersecting) video.play().catch(() => {});
+        else video.pause();
+      });
+    }, { threshold: 0.25 }).observe(video);
+  }
+})();
+
 // 3. Guía gratuita: valida el formulario, guarda los datos en Google Sheets y muestra la descarga
 (function () {
   const form = document.getElementById('guia-form');
