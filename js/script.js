@@ -49,6 +49,9 @@ document.querySelectorAll('.js-whatsapp').forEach((enlace) => {
     if (typeof window.fbq === 'function') {
       window.fbq('track', 'Contact', { content_name: 'WhatsApp', ubicacion: enlace.dataset.ubicacion || '' });
     }
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'clic_whatsapp', { ubicacion: enlace.dataset.ubicacion || '' });
+    }
   });
 });
 
@@ -159,6 +162,9 @@ document.querySelectorAll('.js-whatsapp').forEach((enlace) => {
 
     if (typeof window.fbq === 'function') {
       window.fbq('track', 'Lead', { content_name: 'Guía De la consulta a la reserva' });
+    }
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'generate_lead', { metodo: 'guia_gratuita' });
     }
 
     form.hidden = true;
