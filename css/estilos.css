@@ -15,7 +15,7 @@
   --tinta: #1E2A31;
   --linea: rgba(36, 69, 86, .16);
 
-  --f-titulo: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --f-titulo: "DM Serif Display", "Iowan Old Style", Georgia, serif;
   --f-texto: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
 
   --ancho: 1120px;
@@ -63,8 +63,8 @@ h1, h2, h3 {
   margin: 0;
   letter-spacing: -0.01em;
 }
-h1 { font-size: clamp(2.4rem, 5.6vw, 4.1rem); line-height: 1.06; }
-h2 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); line-height: 1.12; }
+h1 { font-size: clamp(2.3rem, 5.2vw, 3.8rem); line-height: 1.06; }
+h2 { font-size: clamp(1.8rem, 3.3vw, 2.6rem); line-height: 1.12; }
 h3 { font-size: 1.35rem; line-height: 1.25; }
 h1 em, h2 em { font-style: italic; }
 p { margin: 0; }
